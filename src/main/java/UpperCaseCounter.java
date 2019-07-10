@@ -1,12 +1,17 @@
 public class UpperCaseCounter {
     public int getNumberOfUpperCaseCharactersInString(String str) {
+        // str이 null이면 return 0;
         if (str == null) {
             return 0;
         }
 
+        // 대문자 갯수
         int numberOfUpperCaseChars = 0;
+
         for (int index=0; index < str.length(); index++) {
+
             char charAt = str.charAt(index);
+
             if (charAt >= 'A' && charAt <= 'Z') {
                 numberOfUpperCaseChars++;
             }
